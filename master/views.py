@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth import authenticate,login,logout
+from django.contrib import messages
 
 # Create your views here.
 
@@ -8,7 +10,7 @@ def HomeView(request):
 
 def AboutView(request):
     context={}
-    return render (request,'master/aboutus.html',context)
+    return render (request,'master/contact.html',context)
 
 def LoginView(request):
     context={}
@@ -17,6 +19,10 @@ def LoginView(request):
 def LogoutView(request):
     context={}
     return render (request,'master/logout.html',context)
+
+def RegistrationView(request):
+    context={}
+    return render (request,'master/registration.html',context)
 
 
 
