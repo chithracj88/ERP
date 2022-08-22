@@ -1,0 +1,38 @@
+{% extends 'staff/base_template.html' %}
+
+
+{% block main_content %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                      <div class="card-header">
+                        
+                        <h3 class="card-title">Profile: {{user.first_name}}</h3>
+                      </div>
+                      <!-- /.card-header -->
+                      <div class="card-body table-responsive p-0">
+                        
+                      <body>
+  
+                        
+                                <div class="col-md-4">
+                                  
+                                        User name: {{user.first_name}}
+                                        {{user.last_name}}
+                                        {{user.address}}
+                                        {{user.dob}}
+                        
+                                         <img src="{{staff.image.url }}"  style="width: 100%; float: left; margin-right: 10px;" />
+                                </div>
+        
+                    <!-- general form elements -->
+  
+                  </div>
+            </div>
+        </div>
+    </section>
+{% endblock main_content %}
+      

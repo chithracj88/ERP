@@ -1,0 +1,35 @@
+{% extends 'staff/base_template.html' %}
+{% block main_content %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                      <div class="card-header">
+                        <h3 class="card-title">Add Staff Profile</h3>
+                      {% if submitted %}
+                      Profile Submitted Successfully
+                      {% else %}
+                      </div>
+                      
+                        </br>
+                        </form>
+                        <body>
+                            <form method = "post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit">Upload</button>
+                            </form>
+                        </body>
+                      {% endif %}
+                    </div>
+                    <!-- /.card -->
+        
+                    <!-- general form elements -->
+  
+                  </div>
+            </div>
+        </div>
+    </section>
+{% endblock main_content %}

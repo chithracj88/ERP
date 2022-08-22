@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from telnetlib import AUTHENTICATION
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,6 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,11 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #local app
-    'master',
     'user',
-    'staff',
     'hod',
+    'staff',
+    'student',
+    
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -74,7 +79,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ERP.wsgi.application'
 
-
+#AUTH_USER_MODEL="user.CustomUser"
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -134,11 +139,17 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+#AUTH_USER_MODEL = "user.CustomUser"
+
 #authentication views
-LOGIN_REDIRECT_URL = 'master:home'
-LOGOUT_REDIRECT_URL = 'master:home'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 #email integrationm
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = 'sent_emails'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '<Your Gmail address>'
+EMAIL_HOST_PASSWORD = 'djangoccj@gmail.com'
+EMAIL_USE_TLS = True
 

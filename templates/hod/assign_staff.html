@@ -1,0 +1,39 @@
+{% extends 'hod/base_template.html' %}
+{% block main_content %}
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                      <div class="card-header">
+                        <h3 class="card-title">Assign Staff</h3>
+                      {% if submitted %}
+                      Staff Assigned  Successfully
+                      {% else %}
+                      </div>
+                      
+                        </br>
+                        </form>
+                        <body>
+                          <form role="form" action="assign_staff" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                          <button type="submit" class="btn btn-primary btn-block">Assign Staff</button>
+                        </div>
+                      </form>
+                      {% endif %}
+                    </div>
+                    <!-- /.card -->
+        
+        
+                    <!-- general form elements -->
+  
+                  </div>
+            </div>
+        </div>
+    </section>
+{% endblock main_content %}
+      

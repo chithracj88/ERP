@@ -1,0 +1,69 @@
+{% extends 'student/base_template.html' %}
+
+{% block main_content %}
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-info">
+                <div class="inner">
+                  <h3>{{student_count}}</h3>
+  
+                  <p>Total students</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-bag"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-success">
+                <div class="inner">
+                  <h3><sup style="font-size: 20px">{{staff_count}}</sup></h3>
+  
+                  <p>Total teachers</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-stats-bars"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{department_count}}</h3>
+  
+                  <p>Total Department</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-person-add"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+              <!-- small box -->
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{course_count}}</h3>
+  
+                  <p>Total cources</p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              </div>
+            </div>
+            <!-- ./col -->
+    </div>
+</section>
+{% endblock main_content %}
